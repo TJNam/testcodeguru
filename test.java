@@ -1,3 +1,4 @@
+import software.amazon.codeguruprofilerjavaagent.Profiler;
 public class JavaExample{
 
   public static void main(String[] args) {
@@ -12,6 +13,11 @@ public class JavaExample{
 
       else
           System.out.println(num3+" is the largest Number");
+    
+    
+    new Profiler.Builder()
+   .profilingGroupName("Test-Guru")
+   .build().start();
   }
 }
 
